@@ -5,11 +5,9 @@ import { FooterContainer } from "../containers/footer";
 import { HeaderContainer } from "../containers/header";
 
 function MoviesList() {
-  
-
   return (
     <React.Fragment>
-      <p>hello from movie list </p>
+      {/* <p>hello from movie list </p> */}
       {/* <HeaderContainer>
         <Form>
           <Form.Title>Enter new movie info</Form.Title>

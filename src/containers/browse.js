@@ -67,7 +67,8 @@ export function BrowseContainer({ slides }) {
     setMovieDescription("");
     setMovieImgUrl("");
   };
-  console.log(movieList);
+
+  // console.log(movieList);
   return profile.displayName ? (
     <React.Fragment>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
@@ -186,10 +187,10 @@ export function BrowseContainer({ slides }) {
       <Card.Group>
         {movieList.length > 0 &&
           movieList.map((movieItem) => (
-            <Card key={`${category}-${movieItem.title.toLowerCase()}`}>
+            <Card key={`${category}`}>
               <Card.Title>{movieItem.title}</Card.Title>
               <Card.Entities>
-                {/* {slideItem.data.map((item) => ( */}
+                {/* {movieList.map((movieItem) => ( */}
                 <Card.Item key={movieItem.Id} item={movieItem}>
                   <Card.Image src={movieItem.url} />
                   <Card.Meta>
@@ -199,6 +200,7 @@ export function BrowseContainer({ slides }) {
                 </Card.Item>
                 {/* ))} */}
               </Card.Entities>
+
               <Card.Feature category={category}>
                 <Player>
                   <Player.Button />

@@ -24,12 +24,12 @@ function App() {
           path={ROUTES.SIGN_UP}
           element={<SignUp />}
         />
-        <Route
+        {/* <Route
           user={user}
           loggedInPath={`${ROUTES.ADD_MOVIE}`}
           path={ROUTES.HOME}
           element={<MoviesList />}
-        />
+        /> */}
         <Route user={user} path={ROUTES.BROWSE} element={<Browse />} />
         <Route
           user={user}
